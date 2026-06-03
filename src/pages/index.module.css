@@ -1,0 +1,75 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f4f8fc 0%, #eaf1f8 40%, #ffffff 100%);
+  border-bottom: 1px solid rgba(10, 110, 209, 0.12);
+}
+
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(10, 110, 209, 0.15), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(0, 66, 130, 0.08), transparent 24%);
+  pointer-events: none;
+}
+
+.heroBanner :global(.hero__title) {
+  color: #0f385f;
+  max-width: 860px;
+  margin: 0 auto;
+  line-height: 1.05;
+}
+
+.heroBanner :global(.hero__subtitle) {
+  color: #1a3f6f;
+  font-size: 1.25rem;
+  max-width: 760px;
+  margin: 1.25rem auto 0;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1rem;
+  }
+
+  .heroBanner :global(.hero__subtitle) {
+    font-size: 1.1rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.searchBar {
+  margin: 2rem auto 0;
+  width: min(1100px, 100%);
+  max-width: 1100px;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.heroBanner :global(.button.button--secondary) {
+  background-color: #0a6ed1;
+  border-color: #0a6ed1;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(10, 110, 209, 0.16);
+}
+
+.heroBanner :global(.button.button--secondary:hover) {
+  background-color: #084d8a;
+  border-color: #084d8a;
+}

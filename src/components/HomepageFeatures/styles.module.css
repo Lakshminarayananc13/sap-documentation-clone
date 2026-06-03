@@ -1,0 +1,82 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+  padding: 3rem 0;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(231, 241, 251, 0.85) 0%, rgba(255, 255, 255, 0.9) 100%);
+}
+
+.featureCard {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 28px;
+  padding: 2rem;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(10, 110, 209, 0.12);
+  border-color: var(--ifm-color-primary);
+}
+
+.featureSvg {
+  height: 180px;
+  width: 180px;
+  filter: drop-shadow(0 18px 30px rgba(10, 110, 209, 0.12));
+}
+
+.linkContainer {
+  display: grid;
+  gap: 0.85rem;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+.linkItem {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  padding-left: 0.75rem;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.linkItem:hover {
+  color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary);
+  transform: translateX(2px);
+}
+
+:global(.theme-dark) .features {
+  background: linear-gradient(180deg, rgba(9, 40, 79, 0.15) 0%, rgba(2, 12, 35, 0.2) 100%);
+}
+
+:global(.theme-dark) .featureCard {
+  background: var(--ifm-color-dark-background);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global(.theme-dark) .featureCard:hover {
+  box-shadow: 0 24px 48px rgba(3, 83, 162, 0.24);
+}
+
+:global(.theme-dark) .linkItem {
+  color: var(--ifm-color-primary);
+}
+
+:global(.theme-dark) .linkItem:hover {
+  color: var(--ifm-color-primary-dark);
+}
+
+:global(.theme-dark) .featureSvg {
+  filter: drop-shadow(0 20px 40px rgba(12, 120, 255, 0.18));
+}

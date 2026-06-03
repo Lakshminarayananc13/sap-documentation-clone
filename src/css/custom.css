@@ -1,0 +1,78 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  /* SAP theme primary color */
+  --ifm-color-primary: #0a6ed1;
+  --ifm-color-primary-dark: #0757a8;
+  --ifm-color-primary-darker: #054a8a;
+  --ifm-color-primary-darkest: #033867;
+  --ifm-color-primary-light: #2a82e0;
+  --ifm-color-primary-lighter: #3a96e8;
+  --ifm-color-primary-lightest: #6fb4f3;
+
+  /* SAP-specific tokens */
+  --sap-blue: #0a6ed1;
+  --sap-muted: #f4f8fd;
+  --sap-accent: #e6f3ff;
+  --sap-success: #0a9d6e;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(10, 110, 209, 0.07);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #1ea6ff;
+  --ifm-color-primary-dark: #178fe6;
+  --ifm-color-primary-darker: #1475bf;
+  --ifm-color-primary-darkest: #0f568f;
+  --ifm-color-primary-light: #2fb8ff;
+  --ifm-color-primary-lighter: #57c6ff;
+  --ifm-color-primary-lightest: #7fd4ff;
+
+  --sap-muted: #071426;
+  --sap-accent: #052033;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.03);
+}
+
+/* Global adjustments for MDX content to match SAP look */
+article {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+blockquote {
+  border-left: 4px solid var(--sap-blue);
+  background: var(--sap-accent);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+}
+
+.markdown highlight, .markdown .highlight {
+  color: #fff;
+}
+
+.docs-callout {
+  border-left: 4px solid var(--sap-blue);
+  background: var(--sap-muted);
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+}
+
+.docs-callout--warning { border-left-color: #f0a000; }
+.docs-callout--info { border-left-color: var(--sap-blue); }
+.docs-callout--success { border-left-color: var(--sap-success); }
+
+.highlight-pill {
+  background: var(--sap-blue);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+}
